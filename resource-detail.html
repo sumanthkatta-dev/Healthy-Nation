@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resource Details — HEALTHY NATION</title>
+    <meta name="description" content="Detailed nutrition and lifestyle resource." />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .resource-detail { min-height: 100vh; background: #fff; color: #000; padding: 48px 20px 120px; display: flex; flex-direction: column; gap: 32px; }
+      .resource-hero { background: #000; color: #fff; text-align: center; padding: 28px 16px; font-size: clamp(28px, 4vw, 40px); font-family: 'Georgia', serif; letter-spacing: 0.5px; }
+      .section-lede { max-width: 820px; margin: 0 auto; text-align: center; color: #444; line-height: 1.6; font-size: 15px; }
+      .back-row { display: flex; justify-content: flex-start; }
+      .back-row .back-btn { position: static; box-shadow: none; background: #000; color: #fff; }
+
+      .food-list { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 42px; }
+      .food-card { display: grid; grid-template-columns: 320px 1fr; gap: 22px; align-items: center; border-bottom: 1px solid #e5e5e5; padding-bottom: 32px; }
+      .food-image { width: 100%; aspect-ratio: 4 / 3; border-radius: 12px; background: linear-gradient(135deg, #e6e6e6 0%, #cfcfcf 100%); display: grid; place-items: center; font-weight: 700; color: #666; letter-spacing: 0.3px; }
+      .food-body h2 { margin: 0 0 8px; font-size: 20px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; }
+      .food-body p { margin: 0 0 14px; color: #555; line-height: 1.6; font-size: 14px; }
+      .nutrition-facts { margin: 0 0 10px; font-weight: 700; font-size: 13px; letter-spacing: 0.4px; }
+      .nutrition-list { margin: 0 0 12px; padding-left: 18px; color: #333; line-height: 1.5; font-size: 13px; }
+      .price { font-weight: 700; font-size: 15px; margin: 0 0 10px; }
+      .card-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+      .card-cta { padding: 10px 18px; border-radius: 999px; border: 1px solid #000; color: #000; text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: 0.4px; text-transform: uppercase; background: #fff; }
+      .card-cta.secondary { background: #000; color: #fff; border-color: #000; }
+      .card-cta.ghost { background: transparent; color: #000; border-color: #ccc; }
+      @media (max-width: 920px) { .food-card { grid-template-columns: 1fr; } }
+
+      .store-section { max-width: 1100px; margin: 10px auto 0; padding-top: 12px; }
+      .store-title { font-size: 24px; margin: 0 0 16px; letter-spacing: 0.4px; text-transform: uppercase; text-align: center; }
+      .store-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+      .store-card { border: 1px solid #e5e5e5; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+      .store-img { width: 100%; aspect-ratio: 4 / 3; border-radius: 10px; background: linear-gradient(135deg, #d2d8e0 0%, #b8c1cc 100%); display: grid; place-items: center; font-weight: 700; color: #555; }
+      .store-card h3 { margin: 0; font-size: 16px; letter-spacing: 0.2px; }
+      .store-card p { margin: 0; font-size: 13px; color: #555; line-height: 1.5; }
+      .store-price { font-weight: 700; font-size: 14px; }
+      .store-actions { display: flex; gap: 8px; align-items: center; }
+      .cart-pill { padding: 8px 12px; border-radius: 999px; border: 1px solid #000; background: #000; color: #fff; font-size: 12px; font-weight: 700; text-decoration: none; }
+      .cart-pill.secondary { background: transparent; color: #000; border-color: #000; }
+
+      .cart-widget { position: fixed; right: 20px; bottom: 20px; background: #111; color: #fff; border-radius: 14px; padding: 14px 16px; box-shadow: 0 12px 30px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 12px; z-index: 20; }
+      .cart-widget .cart-icon { width: 36px; height: 36px; border-radius: 10px; background: #fff; color: #000; display: grid; place-items: center; font-weight: 800; }
+      .cart-widget .cart-meta { display: flex; flex-direction: column; line-height: 1.3; }
+      .cart-widget .cart-meta strong { font-size: 14px; }
+      .cart-widget .cart-meta span { font-size: 12px; color: #cfcfcf; }
+      .cart-widget .checkout-btn { padding: 10px 14px; border-radius: 10px; background: #fff; color: #000; font-weight: 800; border: none; cursor: pointer; }
+      @media (max-width: 640px) { .cart-widget { left: 20px; right: 20px; justify-content: space-between; } }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main">
+      <a class="icon-btn back-btn" aria-label="Back" href="resources.html">
+        <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <nav class="right-icons" aria-label="Utilities"></nav>
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main class="resource-detail">
+      <div class="back-row">
+        <a href="resources.html" class="back-btn"><svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back to Resources</a>
+      </div>
+
+      <div class="resource-hero">Calories</div>
+
+      <p class="section-lede">Sample calorie-friendly picks. Replace images and copy with your actual guidance. Each “More Info” and “Add to Cart” is a placeholder pointing to the store section.</p>
+
+      <section class="food-list" aria-label="Calories list">
+        <article class="food-card">
+          <div class="food-image">Eggs</div>
+          <div class="food-body">
+            <h2>EGGS</h2>
+            <p>Light, nutrient-dense protein source with essential choline. Track portion sizes to fit your plan.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~6g</li>
+              <li>Fat: ~5g</li>
+              <li>Calories: ~70</li>
+            </ul>
+            <div class="price">₹499 / dozen</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Chicken Breast</div>
+          <div class="food-body">
+            <h2>Chicken Breast</h2>
+            <p>Lean protein staple; grill or bake for lower added fat. Great for muscle maintenance.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~31g</li>
+              <li>Fat: ~3.5g</li>
+              <li>Calories: ~165</li>
+            </ul>
+            <div class="price">₹787 / lb</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Chicken Thigh</div>
+          <div class="food-body">
+            <h2>Chicken Thigh</h2>
+            <p>Richer flavor with a bit more fat; trim skin to reduce calories if needed.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~26g</li>
+              <li>Fat: ~10g</li>
+              <li>Calories: ~210</li>
+            </ul>
+            <div class="price">₹663 / lb</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Chicken Wing</div>
+          <div class="food-body">
+            <h2>Chicken Wing</h2>
+            <p>Higher fat; bake instead of fry to moderate calories. Balance portions with veggies.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~20g</li>
+              <li>Fat: ~14g</li>
+              <li>Calories: ~220</li>
+            </ul>
+            <div class="price">₹580 / lb</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Salmon</div>
+          <div class="food-body">
+            <h2>Salmon</h2>
+            <p>Omega-3 rich protein; pair with greens for a balanced plate.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~25g</li>
+              <li>Fat: ~13g (mostly healthy)</li>
+              <li>Calories: ~230</li>
+            </ul>
+            <div class="price">₹1,078 / lb</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">A2 Milk</div>
+          <div class="food-body">
+            <h2>A2 Milk</h2>
+            <p>Alternative dairy option; choose low-fat to keep calories in check.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~8g</li>
+              <li>Fat: ~8g (whole)</li>
+              <li>Calories: ~150</li>
+            </ul>
+            <div class="price">₹373 / half gallon</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Dark Chocolate</div>
+          <div class="food-body">
+            <h2>Dark Chocolate</h2>
+            <p>Rich treat; opt for 70%+ cacao and mind portions to manage calories.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~2g</li>
+              <li>Fat: ~12g</li>
+              <li>Calories: ~170</li>
+            </ul>
+            <div class="price">₹331 / bar</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Yogurt</div>
+          <div class="food-body">
+            <h2>Yogurt</h2>
+            <p>Choose low-fat, high-protein options; add berries for fiber without many calories.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~10g</li>
+              <li>Fat: ~0-4g</li>
+              <li>Calories: ~90-120</li>
+            </ul>
+            <div class="price">₹124 / cup</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Nuts</div>
+          <div class="food-body">
+            <h2>Nuts</h2>
+            <p>Energy-dense; small portions go a long way. Great for healthy fats and satiety.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~5g (per 1 oz)</li>
+              <li>Fat: ~14g</li>
+              <li>Calories: ~170</li>
+            </ul>
+            <div class="price">₹539 / lb</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Peanut Butter</div>
+          <div class="food-body">
+            <h2>Peanut Butter</h2>
+            <p>Calorie-dense spread; measure servings. Pairs well with fruit for balanced snacks.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~8g (per 2 tbsp)</li>
+              <li>Fat: ~16g</li>
+              <li>Calories: ~190</li>
+            </ul>
+            <div class="price">₹414 / jar</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-image">Tofu</div>
+          <div class="food-body">
+            <h2>Tofu</h2>
+            <p>Plant protein that absorbs flavors; sauté or bake with minimal oil to keep calories moderate.</p>
+            <div class="nutrition-facts">Nutrition Facts</div>
+            <ul class="nutrition-list">
+              <li>Protein: ~10g</li>
+              <li>Fat: ~6g</li>
+              <li>Calories: ~120</li>
+            </ul>
+            <div class="price">₹290 / pack</div>
+            <div class="card-actions">
+              <a class="card-cta secondary" href="#store">Add to Cart</a>
+              <a class="card-cta ghost" href="#store">Go to store</a>
+              <a class="card-cta" href="#">More Info</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="store" class="store-section" aria-label="Store">
+        <h2 class="store-title">Store</h2>
+        <div class="store-grid">
+          <article class="store-card">
+            <div class="store-img">Starter Protein Box</div>
+            <h3>Starter Protein Box</h3>
+            <p>Eggs, chicken breast, tofu. Balanced basics to cover a week of meals.</p>
+            <div class="store-price">₹2,656</div>
+            <div class="store-actions">
+              <a class="cart-pill" href="#">Add to Cart</a>
+              <a class="cart-pill secondary" href="#">Checkout</a>
+            </div>
+          </article>
+
+          <article class="store-card">
+            <div class="store-img">Omega Pack</div>
+            <h3>Omega Pack</h3>
+            <p>Salmon fillets, nuts, and dark chocolate for smart fats and satiety.</p>
+            <div class="store-price">₹2,324</div>
+            <div class="store-actions">
+              <a class="cart-pill" href="#">Add to Cart</a>
+              <a class="cart-pill secondary" href="#">Checkout</a>
+            </div>
+          </article>
+
+          <article class="store-card">
+            <div class="store-img">Snack & Sip</div>
+            <h3>Snack & Sip</h3>
+            <p>Greek yogurt, A2 milk, and peanut butter for quick, protein-forward snacks.</p>
+            <div class="store-price">₹1,577</div>
+            <div class="store-actions">
+              <a class="cart-pill" href="#">Add to Cart</a>
+              <a class="cart-pill secondary" href="#">Checkout</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="cart-widget" aria-label="Cart summary">
+      <div class="cart-icon">🛒</div>
+      <div class="cart-meta"><strong>3 items</strong><span>Est. ₹6,639</span></div>
+      <button class="checkout-btn" type="button">Checkout</button>
+    </div>
+
+    <footer class="site-footer">
+      <p>All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</p>
+    </footer>
+  </body>
+</html>

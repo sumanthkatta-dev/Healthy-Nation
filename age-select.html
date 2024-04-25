@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Select Your Age — HEALTHY NATION</title>
+    <meta name="description" content="Select your precise age range for personalized fitness guidance." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn back-btn" aria-label="Back">
+        <span class="back-arrow"></span>
+      </button>
+
+      <nav class="right-icons" aria-label="Utilities">
+        <a class="icon-link" href="#login" aria-label="Login">
+          <span class="user"></span><span class="login-text">Log In</span>
+        </a>
+        <span class="kettlebell" aria-hidden="true"></span>
+        <span class="hex" aria-hidden="true"></span>
+        <a class="icon-link" href="#cart" aria-label="Cart">
+          <span class="bag"></span>
+        </a>
+        <span class="lock" aria-hidden="true"></span>
+        <span class="badge" aria-hidden="true">0</span>
+      </nav>
+
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main>
+      <section id="precise-age" class="precise-age" aria-labelledby="age-title">
+        <h1 id="age-title" class="sr-only">Select Your Precise Age Range</h1>
+
+        <ul class="age-cards age-cards-4col" role="list">
+          <!-- 10-12 Years -->
+          <li class="age-card">
+            <div class="card-image age-10-12">
+            </div>
+            <div class="card-content">
+              <h2>10 - 12 YEARS</h2>
+            </div>
+          </li>
+
+          <!-- 13-15 Years -->
+          <li class="age-card">
+            <div class="card-image age-13-15">
+            </div>
+            <div class="card-content">
+              <h2>13 - 15 YEARS</h2>
+            </div>
+          </li>
+
+          <!-- 16-18 Years -->
+          <li class="age-card">
+            <div class="card-image age-16-18">
+            </div>
+            <div class="card-content">
+              <h2>16 - 18 YEARS</h2>
+            </div>
+          </li>
+
+          <!-- 19-20 Years -->
+          <li class="age-card">
+            <div class="card-image age-19-20">
+            </div>
+            <div class="card-content">
+              <h2>19 - 20 YEARS</h2>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</p>
+    </footer>
+
+    <button class="chat-btn" aria-label="Open chat">
+      <span class="chat-logo">HN</span>
+      <span class="chat-text">Let's Chat!</span>
+    </button>
+
+    <div class="chat-popover" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <div class="chat-header">
+        <span id="chat-title">Chat</span>
+        <button class="close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chat-body">
+        <p>This is a placeholder chat. Replace with your provider.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

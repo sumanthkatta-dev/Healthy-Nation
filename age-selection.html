@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Age Selection | HEALTHY NATION</title>
+    <meta name="description" content="Select your age group for personalized fitness recommendations" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="age-selection-page">
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="right-icons" aria-label="Utilities"></nav>
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main class="age-selection-main">
+      <a href="fitness-level.html" class="page-back-btn" aria-label="Back">
+        <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      
+      <div class="age-selection-content">
+        <h1 class="age-section-title">Fitness</h1>
+        
+        <div class="age-grid">
+          <div class="age-card" data-age="young">
+            <div class="age-card-image young-bg"></div>
+            <div class="age-card-content">
+              <span class="age-btn">YOUNG</span>
+            </div>
+          </div>
+
+          <div class="age-card" data-age="middle">
+            <div class="age-card-image middle-bg"></div>
+            <div class="age-card-content">
+              <span class="age-btn">MIDDLE-AGED</span>
+            </div>
+          </div>
+
+          <div class="age-card" data-age="old">
+            <div class="age-card-image old-bg"></div>
+            <div class="age-card-content">
+              <span class="age-btn">OLD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="age-info-section">
+          <div class="age-info-card">
+            <h2>YOUNG ADULT</h2>
+            <p>"In this young adult age group, ranging from 10 to 20 years, we can observe the daily nutritional requirements."</p>
+          </div>
+
+          <div class="age-info-card">
+            <h2>MID-AGED ADULT</h2>
+            <p>"In this young adult age group, ranging from 21 to 40 years, we can observe the daily nutritional requirements."</p>
+          </div>
+
+          <div class="age-info-card">
+            <h2>OLD ADULT</h2>
+            <p>"In this young adult age group, ranging from 40 to 50 years, we can observe the daily nutritional requirements."</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="age-selection-footer">All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</footer>
+
+    <button class="chat-btn" aria-label="Open chat">
+      <span class="chat-logo">HN</span>
+      <span class="chat-text">Let's Chat!</span>
+    </button>
+
+    <div class="chat-popover" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <div class="chat-header">
+        <span id="chat-title">Chat</span>
+        <button class="close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chat-body">
+        <p>This is a placeholder chat. Replace with your provider.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

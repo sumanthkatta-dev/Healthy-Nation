@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Workout Plan | HEALTHY NATION</title>
+    <meta name="description" content="Personalized workout plan based on your gender and fitness level" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="workout-page">
+    <div class="top-note">Built on WIX STUDIO</div>
+
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="right-icons" aria-label="Utilities">
+        <a class="icon-link" href="#login" aria-label="Login">
+          <span class="user"></span><span class="login-text">Log In</span>
+        </a>
+        <span class="kettlebell" aria-hidden="true"></span>
+        <span class="hex" aria-hidden="true"></span>
+        <a class="icon-link" href="#cart" aria-label="Cart">
+          <span class="bag"></span>
+        </a>
+        <span class="lock" aria-hidden="true"></span>
+        <span class="badge" aria-hidden="true">0</span>
+      </nav>
+
+      <a href="index.html" class="logo" aria-label="Healthy Nation logo">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main class="workout-main">
+      <a href="index.html" class="back-arrow-btn" aria-label="Back">
+        <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      
+      <div class="workout-content">
+        <h1 class="workout-title">Select Your Gender</h1>
+        <p class="workout-subtitle">For personalized workout recommendations</p>
+        
+        <div class="gender-selector">
+          <button class="gender-card female-card" data-gender="female">
+            <div class="gender-image female-image"></div>
+            <span class="gender-label">FEMALE</span>
+          </button>
+          
+          <button class="gender-card male-card" data-gender="male">
+            <div class="gender-image male-image"></div>
+            <span class="gender-label">MALE</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="workout-footer">All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</footer>
+
+    <button class="chat-btn" aria-label="Open chat">
+      <span class="chat-logo">HN</span>
+      <span class="chat-text">Let's Chat!</span>
+    </button>
+
+    <div class="chat-popover" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <div class="chat-header">
+        <span id="chat-title">Chat</span>
+        <button class="close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chat-body">
+        <p>This is a placeholder chat. Replace with your provider.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

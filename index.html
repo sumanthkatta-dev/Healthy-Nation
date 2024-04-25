@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HEALTHY NATION</title>
+    <meta name="description" content="Basics For Better Health" />
+    <meta property="og:title" content="HEALTHY NATION" />
+    <meta property="og:description" content="Basics For Better Health" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="right-icons" aria-label="Utilities">
+        <a class="icon-link" href="#login" aria-label="Login">
+          <span class="user"></span><span class="login-text">Log In</span>
+        </a>
+        <span class="kettlebell" aria-hidden="true"></span>
+        <span class="hex" aria-hidden="true"></span>
+        <a class="icon-link" href="#cart" aria-label="Cart">
+          <span class="bag"></span>
+        </a>
+        <span class="lock" aria-hidden="true"></span>
+        <span class="badge" aria-hidden="true">0</span>
+      </nav>
+
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 class="title">
+            <span class="line">GET</span>
+            <span class="line">FITTER</span>
+          </h1>
+          <p class="subtitle">Personalized workouts, meal plans & nutrition insights—all in one place.</p>
+          <a class="cta" href="tools.html">Start Your Healthy Journey</a>
+        </div>
+      </section>
+
+      <!-- Calculators Section -->
+      <section id="calculators" class="calculators" aria-labelledby="calculators-title">
+        <h2 id="calculators-title" class="sr-only">Health Calculators</h2>
+        <div class="calculator-cards">
+          <div class="calculator-card">
+            <h3>BMI<br>CALCULATOR</h3>
+            <a href="bmi.html" class="enter-btn">
+              <span>→ ENTER</span>
+            </a>
+          </div>
+          <div class="calculator-card">
+            <h3>CALORIES<br>CALCULATOR</h3>
+            <a href="calories.html" class="enter-btn">
+              <span>→ ENTER</span>
+            </a>
+          </div>
+        </div>
+        <div class="welcome-marquee">
+          WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME WELCOME
+        </div>
+      </section>
+
+      <!-- Overview / Basic Info -->
+      <section id="overview" class="overview" aria-labelledby="overview-title">
+        <div class="overview-head">
+          <h2 id="overview-title">Healthy Nation — Overview</h2>
+          <p class="overview-sub">Core features that power your wellness journey.</p>
+        </div>
+
+        <ul class="features" role="list">
+          <li class="feature">
+            <span class="badge">1</span>
+            <h3>User Information</h3>
+            <p>Collect basic details to tailor guidance and plans.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">2</span>
+            <h3>Calculating BMI & Calories</h3>
+            <p>Automatic BMI and daily calorie needs based on inputs.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">3</span>
+            <h3>Personalized Diet Plan</h3>
+            <p>Diet plans matched to goals and preferences.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">4</span>
+            <h3>Personalized Workout Plan</h3>
+            <p>Workout routines aligned to experience level and schedule.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">5</span>
+            <h3>In‑Built Store</h3>
+            <p>Buy recommended resources directly from trusted partners.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">6</span>
+            <h3>Food Resources</h3>
+            <p>Ingredient insights: macros, vitamins, and helpful guidance.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">7</span>
+            <h3>Community & Support</h3>
+            <p>Share progress, recipes, and motivation with others.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">8</span>
+            <h3>Professional Support</h3>
+            <p>Connect with nutritionists, trainers, and wellness experts.</p>
+          </li>
+          <li class="feature">
+            <span class="badge">9</span>
+            <h3>Healthy Nation AI Bot</h3>
+            <p>Instant Q&A for plans, breakdowns, and lifestyle tips.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</p>
+    </footer>
+
+    <button class="chat-btn" aria-label="Open chat">
+      <span class="chat-logo">HN</span>
+      <span class="chat-text">Let's Chat!</span>
+    </button>
+
+    <div class="chat-popover" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <div class="chat-header">
+        <span id="chat-title">Chat</span>
+        <button class="close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chat-body">
+        <p>This is a placeholder chat. Replace with your provider.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

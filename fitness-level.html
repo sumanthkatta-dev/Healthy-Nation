@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fitness Level | HEALTHY NATION</title>
+    <meta name="description" content="Select your fitness level for personalized workout recommendations" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="fitness-level-page">
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn" aria-label="Menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="right-icons" aria-label="Utilities"></nav>
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main class="fitness-level-main">
+      <a href="workout.html" class="page-back-btn" aria-label="Back">
+        <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      
+      <div class="fitness-level-content">
+        <h1 class="fitness-level-title">What's Your Fitness Level?</h1>
+        <p class="fitness-level-subtitle">We'll customize your workout plan accordingly</p>
+        
+        <div class="fitness-level-grid">
+          <div class="fitness-card" data-level="beginner">
+            <h3>Beginner</h3>
+            <p>Just starting your fitness journey</p>
+            <ul>
+              <li>Low impact exercises</li>
+              <li>Building foundation</li>
+              <li>3 days/week</li>
+            </ul>
+          </div>
+
+          <div class="fitness-card" data-level="intermediate">
+            <h3>Intermediate</h3>
+            <p>Some fitness experience</p>
+            <ul>
+              <li>Moderate intensity</li>
+              <li>Progressive training</li>
+              <li>4-5 days/week</li>
+            </ul>
+          </div>
+
+          <div class="fitness-card" data-level="advanced">
+            <h3>Advanced</h3>
+            <p>Regular workout experience</p>
+            <ul>
+              <li>High intensity</li>
+              <li>Advanced techniques</li>
+              <li>5-6 days/week</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="fitness-level-footer">All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</footer>
+
+    <button class="chat-btn" aria-label="Open chat">
+      <span class="chat-logo">HN</span>
+      <span class="chat-text">Let's Chat!</span>
+    </button>
+
+    <div class="chat-popover" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <div class="chat-header">
+        <span id="chat-title">Chat</span>
+        <button class="close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chat-body">
+        <p>This is a placeholder chat. Replace with your provider.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

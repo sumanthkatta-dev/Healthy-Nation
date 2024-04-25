@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cart — HEALTHY NATION</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .cart-page { min-height: 100vh; background: #f7f7f7; color: #000; padding: 48px 20px 96px; }
+      .cart-wrap { max-width: 960px; margin: 0 auto; background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 24px; box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+      .cart-wrap h1 { margin: 0 0 16px; font-size: 26px; letter-spacing: 0.5px; }
+      .cart-item { display: grid; grid-template-columns: 120px 1fr auto; gap: 14px; align-items: center; padding: 14px 0; border-bottom: 1px solid #eee; }
+      .cart-item:last-child { border-bottom: none; }
+      .cart-thumb { width: 100%; aspect-ratio: 4/3; border-radius: 10px; background: linear-gradient(135deg, #d6d6d6 0%, #bcbcbc 100%); display: grid; place-items: center; font-weight: 700; color: #555; }
+      .cart-meta h3 { margin: 0 0 6px; font-size: 16px; letter-spacing: 0.2px; }
+      .cart-meta p { margin: 0; color: #666; font-size: 13px; }
+      .cart-price { font-weight: 800; font-size: 14px; }
+      .cart-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid #eee; margin-top: 18px; }
+      .cart-total { font-size: 16px; font-weight: 800; }
+      .cart-actions { display: flex; gap: 10px; }
+      .pill-btn { padding: 12px 18px; border-radius: 999px; border: 1px solid #000; font-weight: 700; text-decoration: none; color: #000; }
+      .pill-btn.primary { background: #000; color: #fff; }
+      @media (max-width: 700px) { .cart-item { grid-template-columns: 1fr; } .cart-footer { flex-direction: column; gap: 12px; align-items: flex-start; } }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn" aria-label="Menu"><span class="hamburger"></span></button>
+      <nav class="right-icons" aria-label="Utilities"></nav>
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main class="cart-page">
+      <div class="cart-wrap">
+        <h1>Your Cart</h1>
+        <div class="cart-item">
+          <div class="cart-thumb">Protein Box</div>
+          <div class="cart-meta">
+            <h3>Starter Protein Box</h3>
+            <p>Eggs, chicken breast, tofu bundle.</p>
+          </div>
+          <div class="cart-price">₹2,656</div>
+        </div>
+        <div class="cart-item">
+          <div class="cart-thumb">Omega Pack</div>
+          <div class="cart-meta">
+            <h3>Omega Pack</h3>
+            <p>Salmon, nuts, dark chocolate.</p>
+          </div>
+          <div class="cart-price">₹2,324</div>
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">Subtotal: ₹4,980</div>
+          <div class="cart-actions">
+            <a class="pill-btn" href="resources.html">Continue Shopping</a>
+            <a class="pill-btn primary" href="#">Checkout</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

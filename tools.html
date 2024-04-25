@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tools — HEALTHY NATION</title>
+    <meta name="description" content="Health assessment tools including BMI and calorie calculators." />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .tools-page { background: #000; color: #fff; min-height: 100vh; padding: 56px 20px 96px; }
+      .tools-hero { text-align: center; margin-bottom: 48px; max-width: 800px; margin-left: auto; margin-right: auto; }
+      .tools-hero h1 { font-size: clamp(32px, 5vw, 52px); margin: 0 0 12px; letter-spacing: 0.5px; }
+      .tools-hero p { margin: 0; color: #cfcfcf; line-height: 1.6; font-size: 16px; }
+      .tools-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+      .tool-card { background: #0f0f0f; border: 1px solid #1f1f1f; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px; transition: all 200ms ease; }
+      .tool-card:hover { transform: translateY(-4px); border-color: #2f7cff; }
+      .tool-card h2 { margin: 0; font-size: 22px; letter-spacing: 0.3px; }
+      .tool-card p { margin: 0; color: #999; line-height: 1.6; font-size: 14px; }
+      .tool-features { margin: 8px 0; padding-left: 20px; }
+      .tool-features li { color: #888; font-size: 13px; margin: 6px 0; }
+      .tool-cta { margin-top: auto; padding-top: 12px; }
+      .tool-btn { display: inline-block; padding: 12px 18px; border-radius: 999px; background: #2f7cff; color: #fff; text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: 0.3px; text-transform: uppercase; transition: background 200ms ease; }
+      .tool-btn:hover { background: #1f5cef; }
+      .tool-btn.secondary { background: transparent; border: 1px solid #444; color: #fff; }
+      .tool-btn.secondary:hover { border-color: #fff; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn" aria-label="Menu"><span class="hamburger"></span></button>
+      <nav class="right-icons" aria-label="Utilities"></nav>
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main class="tools-page">
+      <div class="tools-hero">
+        <h1>Health Tools</h1>
+        <p>Use our free calculators and assessments to understand your fitness baseline and personalize your journey.</p>
+      </div>
+
+      <div class="tools-grid">
+        <div class="tool-card">
+          <h2>BMI Calculator</h2>
+          <p>Calculate your Body Mass Index to assess your weight category and health risk level.</p>
+          <ul class="tool-features">
+            <li>Metric & imperial units</li>
+            <li>Instant results & interpretation</li>
+            <li>Health risk assessment</li>
+          </ul>
+          <div class="tool-cta">
+            <a class="tool-btn" href="bmi.html">Open Calculator</a>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <h2>Calorie Calculator</h2>
+          <p>Determine your daily caloric needs based on your lifestyle, goals, and activity level.</p>
+          <ul class="tool-features">
+            <li>Personalized calorie targets</li>
+            <li>Weight loss, maintenance, or gain</li>
+            <li>Activity level factoring</li>
+          </ul>
+          <div class="tool-cta">
+            <a class="tool-btn" href="calories.html">Open Calculator</a>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <h2>Personalized Fitness Plan</h2>
+          <p>Get a workout plan tailored to your gender, fitness level, and age group.</p>
+          <ul class="tool-features">
+            <li>Gender-specific routines</li>
+            <li>Level-appropriate workouts</li>
+            <li>Weekly schedule & tips</li>
+          </ul>
+          <div class="tool-cta">
+            <a class="tool-btn" href="workout.html">Start Plan</a>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <h2>Diet Plan Builder</h2>
+          <p>Explore meal recommendations and nutrition facts aligned to your calorie targets and goals.</p>
+          <ul class="tool-features">
+            <li>Meal scheduling</li>
+            <li>Nutrition breakdowns</li>
+            <li>Ingredient insights</li>
+          </ul>
+          <div class="tool-cta">
+            <a class="tool-btn" href="diet-plan.html">View Plans</a>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <h2>Nutrition & Resources</h2>
+          <p>Browse nutrition facts, lifestyle tips, and health resources with linked product recommendations.</p>
+          <ul class="tool-features">
+            <li>Macro & micronutrient guides</li>
+            <li>Food database & facts</li>
+            <li>Integrated shop links</li>
+          </ul>
+          <div class="tool-cta">
+            <a class="tool-btn" href="resources.html">Explore</a>
+          </div>
+        </div>
+
+        <div class="tool-card">
+          <h2>Progress Tracker</h2>
+          <p>Log your workouts, meals, and measurements to track progress over time.</p>
+          <ul class="tool-features">
+            <li>Weekly summaries</li>
+            <li>Custom goal setting</li>
+            <li>Visual progress charts</li>
+          </ul>
+          <div class="tool-cta">
+            <a class="tool-btn secondary" href="#">Coming Soon</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

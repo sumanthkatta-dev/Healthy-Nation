@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fitness Age Groups — HEALTHY NATION</title>
+    <meta name="description" content="Select your age group and discover personalized fitness plans." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Main">
+      <button class="icon-btn back-btn" aria-label="Back">
+        <span class="back-arrow"></span>
+      </button>
+
+      <nav class="right-icons" aria-label="Utilities">
+        <a class="icon-link" href="#login" aria-label="Login">
+          <span class="user"></span><span class="login-text">Log In</span>
+        </a>
+        <span class="kettlebell" aria-hidden="true"></span>
+        <span class="hex" aria-hidden="true"></span>
+        <a class="icon-link" href="#cart" aria-label="Cart">
+          <span class="bag"></span>
+        </a>
+        <span class="lock" aria-hidden="true"></span>
+        <span class="badge" aria-hidden="true">0</span>
+      </nav>
+
+      <a class="logo" aria-label="Healthy Nation logo" href="index.html">
+        <picture class="logo-pic">
+          <source srcset="assets/logo.png" type="image/png" />
+          <img src="assets/logo.svg" alt="Healthy Nation logo" />
+        </picture>
+      </a>
+    </header>
+
+    <main>
+      <section id="fitness-groups" class="fitness-groups" aria-labelledby="fitness-title">
+        <h1 id="fitness-title" class="sr-only">Fitness Age Groups</h1>
+
+        <ul class="age-cards" role="list">
+          <!-- Young Adult -->
+          <li class="age-card">
+            <div class="card-image young-adult">
+              <div class="overlay-labels">
+                <span class="label-badge">10 - 20</span>
+                <span class="label-badge">YEARS</span>
+              </div>
+              <div class="card-title">Fitness</div>
+            </div>
+            <div class="card-content">
+              <h2>YOUNG ADULT</h2>
+              <p>"In this young adult age group, ranging from 10 to 20 years, we can observe the daily nutritional requirements."</p>
+              <a href="#select-young" class="btn btn-secondary">Select</a>
+            </div>
+          </li>
+
+          <!-- Mid-Aged Adult -->
+          <li class="age-card">
+            <div class="card-image mid-aged">
+              <div class="overlay-labels">
+                <span class="label-badge">21 - 40</span>
+                <span class="label-badge">YEARS</span>
+              </div>
+              <div class="card-title">Fitness</div>
+            </div>
+            <div class="card-content">
+              <h2>MID-AGED ADULT</h2>
+              <p>"In this young adult age group, ranging from 21 to 40 years, we can observe the daily nutritional requirements."</p>
+              <a href="#select-mid" class="btn btn-secondary">Select</a>
+            </div>
+          </li>
+
+          <!-- Old Adult -->
+          <li class="age-card">
+            <div class="card-image old-adult">
+              <div class="overlay-labels">
+                <span class="label-badge">40 - 50</span>
+                <span class="label-badge">YEARS</span>
+              </div>
+              <div class="card-title">Fitness</div>
+            </div>
+            <div class="card-content">
+              <h2>OLD ADULT</h2>
+              <p>"In this young adult age group, ranging from 40 to 50 years, we can observe the daily nutritional requirements."</p>
+              <a href="#select-old" class="btn btn-secondary">Select</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>All rights reserved by HEALTHY NATION | Built by Sumanth © 2025</p>
+    </footer>
+
+    <button class="chat-btn" aria-label="Open chat">
+      <span class="chat-logo">HN</span>
+      <span class="chat-text">Let's Chat!</span>
+    </button>
+
+    <div class="chat-popover" role="dialog" aria-modal="false" aria-labelledby="chat-title" hidden>
+      <div class="chat-header">
+        <span id="chat-title">Chat</span>
+        <button class="close" aria-label="Close chat">✕</button>
+      </div>
+      <div class="chat-body">
+        <p>This is a placeholder chat. Replace with your provider.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
