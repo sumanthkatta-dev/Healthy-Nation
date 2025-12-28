@@ -2,59 +2,59 @@
 
 ![Status](https://img.shields.io/badge/Status-MVP_Prototype-orange?style=for-the-badge)
 ![Workflow](https://img.shields.io/badge/Workflow-Wix_to_Code-purple?style=for-the-badge)
-![Type](https://img.shields.io/badge/Type-Static_Multi--Page-blue?style=for-the-badge)
+![Type](https://img.shields.io/badge/Architecture-Static_Multi--Page-blue?style=for-the-badge)
 
 > **2nd Year Lab Project (2024)**
-> A static multi-page health platform MVP. Prototyped in Wix Studio, implemented in pure code.
+> A holistic health ecosystem MVP. Visualized in Wix Studio and reverse-engineered into a high-performance static web application.
 
 ## 🖼️ Project Preview
-![Project Preview](./preview.png)
+![Project Preview](./preview.jpg)
 *(Snapshot of the final MVP interface)*
 
-## 🚀 Live Demo
-[**🔗 Click Here to View Live Website**](https://sumanthkatta-dev.github.io/Healthy-Nation/)
+## 🚀 Live Access
+| **Platform** | **Link** |
+| :--- | :--- |
+| **Live Site (GitHub Pages)** | [**🔗 Launch Application**](https://sumanthkatta-dev.github.io/Healthy-Nation/) |
+| **Original Design** | [**🎨 View Wix Studio Prototype**](https://sumanthkatta20055.wixstudio.com/my-site-1) |
 
-> **⚠️ Seeing a Red "Dangerous Site" Warning?**
-> Google's automated security bots may flag this new domain as a false positive.
-> **To bypass it:** Click **"Details"** -> **"Visit this unsafe site"** (underlined text).
-> *This is a 100% static student project.*
+> **⚠️ Note on "Dangerous Site" Warning**
+> Google's security bots may flag this new student domain as a false positive.
+> **To bypass:** Click **"Details"** → **"Visit this unsafe site"** (underlined).
+> *This is a 100% static, safe educational project.*
 
 ---
 
-## 📘 Case Study: From Prototype to Code
-This project was executed as a technical case study in **rapid prototyping and implementation**:
+## 🔄 User Experience (UX) Journey
+The application is designed as a linear, logic-driven ecosystem that guides the user from assessment to action:
 
-### Phase 1: Visual Prototyping (Wix Studio)
-Before writing code, I utilized **Wix Studio** to design the high-fidelity UI. This allowed me to:
-* Experiment with color theory and layout without code overhead.
-* Establish the user journey and experience (UX) flow.
+1.  **📊 Biometric Assessment**
+    * **Input:** User enters height, weight, and age.
+    * **Processing:** The system calculates **BMI** (Body Mass Index) and **TDEE** (Total Daily Energy Expenditure) to establish a health baseline.
+2.  **🥗 Nutritional Strategy**
+    * Based on the calculated biological metrics, the system generates a tailored diet chart optimized for the user's specific age group and caloric needs.
+3.  **💪 Fitness Regimens**
+    * Users are assigned a workout plan corresponding to their calculated "Fitness Level" (Beginner/Intermediate/Advanced) to ensure safe progression.
+4.  **🛒 Integrated Marketplace**
+    * **Closing the Loop:** A built-in e-commerce interface allows users to immediately source recommended nutrition (fresh produce, lean proteins, supplements) directly within the app flow.
 
-### Phase 2: Technical Implementation (The Code)
-I **reverse-engineered** the verified prototype into a lightweight, static site without dependencies:
-* **Frontend:** Semantic HTML5, CSS3, and Vanilla JavaScript.
-* **Backend Concepts:** Integrated Python/Java logic for data processing (during lab evaluation).
-* **Architecture:** Zero-dependency static files for instant loading.
+---
 
-## 🏗️ Site Architecture & User Flows
-The site is structured around specific user journeys:
+## 📘 Technical Case Study: Design-to-Code
+This project served as a case study in **Rapid Prototyping & MVP Development**:
 
-* **Core Pages:**
-    * `index.html` — Hero section with refined CTA, value prop, and overview grid.
-    * `tools.html` — Central hub for all health calculators and assessment tools.
-    * `shop.html` — Curated products with filtering (supplements, nutrition, equipment).
+### Phase 1: High-Fidelity Prototyping
+Before writing code, the UX was architected using **[Wix Studio](https://www.wix.com/studio)**. This allowed for rapid iteration on visual hierarchy and user flow validation.
+* **Tool:** Wix Studio
+* **Objective:** Validate the "Assessment-to-Marketplace" funnel.
 
-* **The "Personalization" Flow:**
-    * `workout.html` → `fitness-level.html` → `age-select.html` → `workout-plan.html`
-    * *Logic:* Guides user from gender selection to a custom workout plan.
+### Phase 2: Technical Implementation
+The validated design was **reverse-engineered** into a dependency-free codebase to ensure maximum performance and portability:
+* **Frontend:** Semantic HTML5, CSS3 (Flexbox/Grid), and Vanilla JavaScript.
+* **Backend Logic:** Python and Java modules were integrated for data processing requirements during academic evaluation.
+* **Optimization:** Zero external framework dependencies for instant load times.
 
-* **Resources & Data:**
-    * `diet-plan.html` — Meal plans with detailed nutrition facts.
-    * `resources.html` — Nutrition tiles, lifestyle features, and store integration.
-    * `resource-detail.html` — Food database with checkout flow simulation.
-
-## 🚀 How to Run Locally
-Since this is a static site, it requires no complex build steps.
-
-**Using Python:**
-```bash
-python -m http.server 8080
+## 🏗️ Technical Architecture
+* `index.html`: Hero section, Value Proposition, and Routing.
+* `tools.html`: The logic engine handling BMI & Calorie calculations.
+* `diet-plan.html`: Dynamic nutritional data rendering based on user inputs.
+* `shop.html`: The frontend commerce layer for the grocery marketplace.
