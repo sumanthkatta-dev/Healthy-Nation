@@ -8,7 +8,7 @@
 > A static multi-page health platform MVP. Prototyped in Wix Studio, implemented in pure code.
 
 ## 🖼️ Project Preview
-![Project Preview](./preview.jpg)
+![Project Preview](./preview.png)
 *(Snapshot of the final MVP interface)*
 
 ## 🚀 Live Demo
