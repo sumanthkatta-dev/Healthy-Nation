@@ -8,7 +8,7 @@
 > A holistic health ecosystem MVP. Visualized in Wix Studio and reverse-engineered into a high-performance static web application.
 
 ## 🖼️ Project Preview
-![Project Preview](./preview.jpg)
+![Project Preview](./preview.png)
 *(Snapshot of the final MVP interface)*
 
 ## 🚀 Live Access
