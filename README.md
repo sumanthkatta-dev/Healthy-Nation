@@ -1,36 +1,60 @@
-# HEALTHY NATION — Static Multi-Page Site
+# HEALTHY NATION 🏥
 
-Static implementation of the HEALTHY NATION flows cloned from provided screenshots (home, gender → age → diet → resources).
+![Status](https://img.shields.io/badge/Status-MVP_Prototype-orange?style=for-the-badge)
+![Workflow](https://img.shields.io/badge/Workflow-Wix_to_Code-purple?style=for-the-badge)
+![Type](https://img.shields.io/badge/Type-Static_Multi--Page-blue?style=for-the-badge)
 
-## Run locally
+> **2nd Year Lab Project (2024)**
+> A static multi-page health platform MVP. Prototyped in Wix Studio, implemented in pure code.
 
-Any static server works. With Python installed:
+## 🖼️ Project Preview
+![Project Preview](./preview.jpg)
+*(Snapshot of the final MVP interface)*
 
+## 🚀 Live Demo
+[**🔗 Click Here to View Live Website**](https://sumanthkatta-dev.github.io/Healthy-Nation/)
+
+> **⚠️ Seeing a Red "Dangerous Site" Warning?**
+> Google's automated security bots may flag this new domain as a false positive.
+> **To bypass it:** Click **"Details"** -> **"Visit this unsafe site"** (underlined text).
+> *This is a 100% static student project.*
+
+---
+
+## 📘 Case Study: From Prototype to Code
+This project was executed as a technical case study in **rapid prototyping and implementation**:
+
+### Phase 1: Visual Prototyping (Wix Studio)
+Before writing code, I utilized **Wix Studio** to design the high-fidelity UI. This allowed me to:
+* Experiment with color theory and layout without code overhead.
+* Establish the user journey and experience (UX) flow.
+
+### Phase 2: Technical Implementation (The Code)
+I **reverse-engineered** the verified prototype into a lightweight, static site without dependencies:
+* **Frontend:** Semantic HTML5, CSS3, and Vanilla JavaScript.
+* **Backend Concepts:** Integrated Python/Java logic for data processing (during lab evaluation).
+* **Architecture:** Zero-dependency static files for instant loading.
+
+## 🏗️ Site Architecture & User Flows
+The site is structured around specific user journeys:
+
+* **Core Pages:**
+    * `index.html` — Hero section with refined CTA, value prop, and overview grid.
+    * `tools.html` — Central hub for all health calculators and assessment tools.
+    * `shop.html` — Curated products with filtering (supplements, nutrition, equipment).
+
+* **The "Personalization" Flow:**
+    * `workout.html` → `fitness-level.html` → `age-select.html` → `workout-plan.html`
+    * *Logic:* Guides user from gender selection to a custom workout plan.
+
+* **Resources & Data:**
+    * `diet-plan.html` — Meal plans with detailed nutrition facts.
+    * `resources.html` — Nutrition tiles, lifestyle features, and store integration.
+    * `resource-detail.html` — Food database with checkout flow simulation.
+
+## 🚀 How to Run Locally
+Since this is a static site, it requires no complex build steps.
+
+**Using Python:**
 ```bash
 python -m http.server 8080
-```
-
-Then open `http://localhost:8080/` and browse the HTML pages.
-
-## Pages
-
-- `index.html` — hero with refined CTA and value prop, overview grid
-- `tools.html` — hub for all calculators and assessment tools
-- `shop.html` — curated products with filtering (supplements, nutrition, equipment)
-- `workout.html` → `fitness-level.html` → `age-select.html` → `workout-plan.html` — gender/level/age flow
-- `diet-plan.html` — meal plans with nutrition facts
-- `resources.html` — nutrition tiles, lifestyle features, and store integration
-- `resource-detail.html` — food database with checkout flow
-- `login.html`, `cart.html` — placeholder auth and cart pages
-- `bmi.html`, `calories.html`, `workout.html`, `workout-plan.html` — supplemental stubs
-- `styles.css` — shared styling; `script.js` — chat popover placeholder
-
-## Customization notes
-
-- Replace header logo by adding `assets/logo.png`; falls back to `assets/logo.svg`.
-- Resource tiles and feature images use gradients as placeholders; swap with real imagery as needed.
-- No build step or dependencies; edit HTML/CSS directly.
-
-## Deployment
-
-- For GitHub Pages, deploy from the repository root so `index.html` resolves at the root path.
